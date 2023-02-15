@@ -1,0 +1,17 @@
+name: Second Pipeline
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  Unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Launch unit tests"
+        run: |
+          set -ev
+          cd modern-web-application
+          npm install
+          npm run test:unit
