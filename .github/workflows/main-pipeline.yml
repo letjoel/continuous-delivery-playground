@@ -17,5 +17,5 @@ jobs:
         run: |
           set -ev
           cd modern-web-application
-          npm install
+          npm ci
           npm run test:unit
